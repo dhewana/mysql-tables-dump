@@ -11,7 +11,7 @@ DB_USER_PASSWORD = 'dbpassword'
 DB_NAME = 'dbname'
 BACKUP_PATH = '/home/user/dbname/'
 ```
-Note : The `/` at the end of BACKUP_PATH is **important**.
+Note : The `/` at the end of `BACKUP_PATH` is **important**.
 
 You can choose the mysql backup command by modifying the `dump_cmd` variable, the default is with `DB_OPT` :
 ```
