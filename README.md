@@ -11,7 +11,18 @@ DB_USER_PASSWORD = 'dbpassword'
 DB_NAME = 'dbname'
 BACKUP_PATH = '/home/user/dbname/'
 ```
-The `/` at the end of BACKUP_PATH is **important**.
+Note : The `/` at the end of BACKUP_PATH is **important**.
+
+You may need to modify the mysql backup command in this line :
+
+without `DB_OPT`
+```
+dump_cmd = "mysqldump -h " + DB_HOST + " -P " + DB_PORT + " -u " + DB_USER + " -p" + DB_USER_PASSWORD + " " + DB_NAME + " " + tables + " | gzip > " + TODAYBACKUPPATH + "/" + DB_NAME + "." + tables + "." + DATETIME + ".sql.gz"
+```
+or with `DB_OPT`
+```
+dump_cmd = "mysqldump " + DB_OPT + " -h " + DB_HOST + " -P " + DB_PORT + " -u " + DB_USER + " -p" + DB_USER_PASSWORD + " " + DB_NAME + " " + tables + " | gzip > " + TODAYBACKUPPATH + "/" + DB_NAME + "." + tables + "." + DATETIME + ".sql.gz"
+```
 
 ## Cron job daily example
 
