@@ -1,5 +1,5 @@
 # mysql-tables-dump
-Dump a MySQL database per table, and delete backup folder older than 7 days.
+Dump a MySQL database per table, and then will delete the mysql backup folder older than 7 days.
 
 ## Config example
 ```
