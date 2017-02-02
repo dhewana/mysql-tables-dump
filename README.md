@@ -24,7 +24,6 @@ dump_cmd = "mysqldump -h " + DB_HOST + " -P " + DB_PORT + " -u " + DB_USER + " -
 ```
 
 ## Cron job daily example
-
 ```
 20 0 * * * /usr/bin/python3 /home/user/mysql_tables_dump.py > /home/user/mysql_tables_dump.log
 ```
