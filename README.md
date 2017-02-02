@@ -11,3 +11,4 @@ DB_USER_PASSWORD = 'dbpassword'
 DB_NAME = 'dbname'
 BACKUP_PATH = '/backup/dbname/'
 ```
+The `/` at the end of BACKUP_PATH is **important**.
